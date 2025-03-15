@@ -308,6 +308,17 @@ mod runtime {
 	// Template
 	#[runtime::pallet_index(50)]
 	pub type TemplatePallet = pallet_parachain_template;
+
+	#[runtime::pallet_index(51)]
+	pub type Utility = pallet_utility;
+
+	#[runtime::pallet_index(52)]
+	pub type CustomPallet = custom_pallet;
+
+	#[runtime::pallet_index(53)]
+	pub type TodoList = pallet_todo_list;
+
+	
 }
 
 #[docify::export(register_validate_block)]
@@ -315,3 +326,4 @@ cumulus_pallet_parachain_system::register_validate_block! {
 	Runtime = Runtime,
 	BlockExecutor = cumulus_pallet_aura_ext::BlockExecutor::<Runtime, Executive>,
 }
+
